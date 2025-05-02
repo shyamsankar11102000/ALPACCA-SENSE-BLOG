@@ -27,6 +27,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="#data">Data</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="#related-work">Related Work</a></li>
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="#Methods">Methods</a></li>
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="#Results">Results</a></li>
                     </ul>
@@ -124,7 +125,7 @@ risk assessment[4], algorithmic trading[5], and financial report summarization[6
                         <p>To ensure the model generalizes beyond the training data, validation is performed using 2,388 additional samples from the Twitter Financial News dataset. This set helps monitor overfitting and tune hyperparameters by testing the model on unseen social media content. For final evaluation, the model is tested on the Financial PhraseBank (FPB)[15], a professionally annotated dataset with 4,840 high-quality financial sentences. This testing step provides a reliable benchmark of how well the model performs on formal, domain-specific financial language, making it a critical component of the model’s assessment pipeline.</p>  
                         <p>To minimize the high cost of expert annotation, existing financial sentiment classification datasets are reformatted into an instruction-following format. Instead of labeling new data from scratch, each sample is combined with one of 15 manually written instructions that describe the sentiment analysis task. These are structured as: “Human: [instruction] + [input], Assistant: [output]”. This approach transforms traditional input-label pairs into a format suitable for training instruction-tuned models, allowing for efficient use of existing resources while maintaining task clarity and diversity</p>
                         <img src="assets/img/ALPACCAGIF.gif" alt="Descriptive text" width="800" height="300">
-                        <h2 class="section-heading" id="Methods">Methods</h2>
+                        <h2 class="section-heading" id="Methods">Method & Experiments</h2>
                         <p>
                             The fine-tuning process of the LLaMA 7B model [12] for financial sentiment analysis was carefully crafted to balance efficiency and performance. It began with the initialization of the pre-trained LLaMA 7B model and tokenizer, which were leveraged to process financial text data. The model's output layer was then adjusted to meet the specific requirements of the sentiment classification task, enabling it to output sentiment labels such as positive, negative, or neutral.
                             </p>
