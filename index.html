@@ -56,7 +56,7 @@
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
-                        <p>Financial Sentiment Analysis is the process of using natural language processing (NLP) and machine learning techniques to interpret and quantify the emotions or opinions expressed in financial news, social media, earnings reports, and other text-based data. It focuses on identifying whether the sentiment is positive, negative, or neutral toward a particular stock, market trend, or economic event. This analysis helps investors and financial institutions understand market psychology and anticipate price movements more effectively.</p>
+                        <p>Financial Sentiment Analysis is the process of using natural language processing (NLP) and machine learning techniques to interpret and quantify the emotions or opinions expressed in financial news, social media, earnings reports, and other text-based data.[1, 2] It focuses on identifying whether the sentiment is positive, negative, or neutral toward a particular stock, market trend, or economic event.[2] This analysis helps investors and financial institutions understand market psychology and anticipate price movements more effectively.</p>
                         <p>The importance of financial sentiment analysis lies in its ability to provide real-time insights that traditional financial metrics may overlook. Markets are often driven not only by fundamentals but also by investor emotion and crowd behavior. By tracking the mood of the market through textual data, sentiment analysis offers an edge in decision-making, especially in high-frequency trading, portfolio management, and risk assessment.</p>
                         <h2 class="section-heading" id="related-work">Related Work</h2>
                         <table border="1" cellpadding="8" cellspacing="0">
@@ -84,7 +84,7 @@
                               <tr>
                                 <td>BloombergGPT</td>
                                 <td>Large LLM</td>
-                                <td>Bloomberg Terminal data, news, filings</td>
+                                <td>Bloomberg Terminal data</td>
                                 <td>News summarization, financial Q&amp;A</td>
                               </tr>
                               <tr>
@@ -97,10 +97,26 @@
                                 <td>FinLlama</td>
                                 <td>LLaMA</td>
                                 <td>Financial news</td>
-                                <td>Sentiment analysis specifically for algorithmic trading</td>
+                                <td>Sentiment analysis for algorithmic trading</td>
                               </tr>
                             </tbody>
                           </table>
+                          <p>
+                            Several domain-specific language models have been developed to tackle various tasks in financial natural language processing, each tailored to different data sources and applications. FinBERT, built on the BERT architecture, is trained on financial news, reports, and SEC filings. It is widely used for sentiment analysis and document classification tasks due to its strong understanding of formal financial language.
+                            </p>
+                            
+                            <p>
+                            FinGPT, based on the GPT architecture, is designed for more generative tasks. Trained on financial news and earnings reports, it excels at text generation and report writing, making it suitable for automated content creation in finance. BloombergGPT, a large-scale model trained on proprietary Bloomberg Terminal data, financial news, and filings, is optimized for tasks like news summarization and financial question-answering, benefiting from its access to rich and structured financial datasets.
+                            </p>
+                            
+                            <p>
+                            In the social media domain, BERTTweet adapts the BERT model to Twitter data, with a focus on finance-related posts. It is particularly effective for analyzing sentiment in informal, user-generated content where language can be noisy and context-dependent. Finally, FinLLaMA is based on the LLaMA architecture and trained specifically on financial news. It is designed with algorithmic trading in mind, making it well-suited for real-time sentiment analysis and decision support in high-frequency trading environments.
+                            </p>
+                            
+                            <p>
+                            These models highlight the growing trend of domain adaptation in language modeling, where fine-tuning general architectures on financial data significantly improves performance on specialized financial tasks.
+                            </p>
+                            
                         <h2 class="section-heading" id="data">Data</h2>
                         <p>The training phase leverages a combination of the Twitter Financial News and FiQA datasets, totaling 10,501 labeled samples. These datasets provide a balanced mix of informal, real-time social media content and more structured financial commentary. This diversity allows the model to learn how sentiment is expressed across different tones and contexts. Standard preprocessing steps such as tokenization, lowercasing, and the removal of non-informative elements (like URLs or mentions) are applied to clean the data. The model is then fine-tuned on this data, often using transformer-based architectures like BERT or FinBERT, which are well-suited for capturing subtle linguistic cues in financial texts.</p>
                         <p>To ensure the model generalizes beyond the training data, validation is performed using 2,388 additional samples from the Twitter Financial News dataset. This set helps monitor overfitting and tune hyperparameters by testing the model on unseen social media content. For final evaluation, the model is tested on the Financial PhraseBank (FPB), a professionally annotated dataset with 4,840 high-quality financial sentences. This testing step provides a reliable benchmark of how well the model performs on formal, domain-specific financial language, making it a critical component of the model’s assessment pipeline.</p>  
@@ -183,11 +199,24 @@
                             <p>
                             These results confirm that our model provides state-of-the-art performance for financial sentiment analysis, particularly excelling in scenarios where data is noisy or sentiment is more subtle, such as in social media content.
                             </p>
+
+                            <h2 class="section-heading" id="references">References</h2>
+
+                            <ol>
+                              <li>Bo Pang, Lillian Lee, and Shivakumar Vaithyanathan. Thumbs up? sentiment classification using machine learning techniques, 2002..</li>
+                              <li>Tim Loughran. When is a liability not a liability? textual analysis, dictionaries, and 10-ks. The Journal of Finance, 02 2011.</li>
+                              <li>Andrew Todd, James Bowden, and Yashar Moshfeghi. Text-based sentiment analysis in finance: synthesising the existing
+                                literature and exploring future directions. 31(1), March 2024.</li>
+                              <li>Wu, S., et al. (2023). BloombergGPT: A Large Language Model for Finance. <i>arXiv preprint arXiv:2304.03285</i>.</li>
+                              <li>Nguyen, D. Q., et al. (2020). BERTweet: A Pre-trained Language Model for English Tweets. <i>EMNLP Findings</i>.</li>
+                              <li>Sankar, S., et al. (2025). FinLLaMA: Fine-Tuned LLaMA for Financial Market Sentiment. <i>Unpublished Manuscript</i>.</li>
+                            </ol>
                             
                     
                     </div>
                 </div>
             </div>
+
         </article>
         <!-- Footer-->
         <footer class="border-top">
