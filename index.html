@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Clean Blog - Start Bootstrap Theme</title>
+        <title>ALPACCA-SENSE</title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -77,8 +77,10 @@
                             <p>
                             A custom training loop was set up with a carefully defined loss function and learning rate scheduling to ensure optimal convergence. The model's performance was closely monitored on a separate validation set to track accuracy and loss, ensuring the model generalized well and didn't overfit. This comprehensive fine-tuning approach led to the creation of a robust and efficient LLaMA 7B model for financial sentiment analysis, capable of performing well across a wide variety of financial texts.
                             </p>
+                            <p>Since the instruction-fine-tuned LLaMA 7B model is an autoregressive generative model, it has the flexibility to produce free-form text—even when trained with an instruction-following format aimed at guiding it toward specific sentiment labels. As a result, the model's outputs may not always be limited to the exact labels “positive,” “negative,” or “neutral,” which poses a challenge during evaluation. To address this, a simple yet effective post-processing step is applied to interpret the model's responses. The output is sequentially scanned for the presence of the words “negative,” “neutral,” or “positive.” As soon as one of these terms is detected, it is mapped to the corresponding sentiment label. If none of the target words appear in the response, the sentiment is defaulted to “neutral.” This rule-based mapping ensures consistent and reliable evaluation of the model’s performance despite its generative nature.</p>
                         <h2 class="section-heading" id="Results">Results</h2>
                         <iframe src="https://www.youtube.com/embed/M1WwQPIkRF4?si=ZxAMW-K31U_YSw5v" width="640" height="480" allow="autoplay"></iframe>
+
                         <p>
                             The evaluation results clearly demonstrate that our fine-tuned LLaMA-7B model outperforms all compared models across both the Financial PhraseBank (FPB) and Twitter Financial News datasets. On the FPB dataset, our model achieves the highest accuracy at 0.712, indicating superior ability to correctly classify financial sentiment. While its F1 Score on FPB (0.603) is slightly below that of ChatGPT 4.0, the difference is minimal, and the overall performance remains strong, reflecting a good balance between precision and recall.
                             </p>
@@ -140,18 +142,7 @@
                             These results confirm that our model provides state-of-the-art performance for financial sentiment analysis, particularly excelling in scenarios where data is noisy or sentiment is more subtle, such as in social media content.
                             </p>
                             
-                        <h2 class="section-heading">Reaching for the Stars</h2>
-                        <p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.</p>
-                        <a href="#!"><img class="img-fluid" src="assets/img/post-sample-image.jpg" alt="..." /></a>
-                        <span class="caption text-muted">To go places and do things that have never been done before – that’s what living is all about.</span>
-                        <p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.</p>
-                        <p>As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.</p>
-                        <p>
-                            Placeholder text by
-                            <a href="http://spaceipsum.com/">Space Ipsum</a>
-                            &middot; Images by
-                            <a href="https://www.flickr.com/photos/nasacommons/">NASA on The Commons</a>
-                        </p>
+                    
                     </div>
                 </div>
             </div>
