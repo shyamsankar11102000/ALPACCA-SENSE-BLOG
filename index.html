@@ -138,7 +138,7 @@ risk assessment[4], algorithmic trading[5], and financial report summarization[6
                             To enhance training efficiency, a parameter-efficient fine-tuning (PEFT) strategy based on LoRA (Low-Rank Adaptation)[13] was applied. LoRA allows for fine-tuning only a subset of the model's parameters, significantly reducing computational requirements while maintaining strong performance. Regular checkpointing was implemented to save the model's state at intervals, allowing for recovery and evaluation during training. Monitoring of training metrics, such as accuracy and loss, was done in real-time to track the model's progress and ensure stable convergence.
                             </p>
                             <p>
-                            A custom training loop was set up with a carefully defined loss function and learning rate scheduling to ensure optimal convergence. The model's performance was closely monitored on a separate validation set to track accuracy and loss, ensuring the model generalized well and didn't overfit. This comprehensive fine-tuning approach led to the creation of a robust and efficient LLaMA 7B model for financial sentiment analysis, capable of performing well across a wide variety of financial texts.
+                            A custom training loop was set up with a carefully defined with learning rate scheduling to ensure optimal convergence. The model's performance was closely monitored on a separate validation set to track accuracy and loss, ensuring the model generalized well and didn't overfit. This comprehensive fine-tuning approach led to the creation of a robust and efficient LLaMA 7B model for financial sentiment analysis, capable of performing well across a wide variety of financial texts.
                             </p>
                             <p>Since the instruction-fine-tuned LLaMA 7B model is an autoregressive generative model, it has the flexibility to produce free-form text—even when trained with an instruction-following format aimed at guiding it toward specific sentiment labels. As a result, the model's outputs may not always be limited to the exact labels “positive,” “negative,” or “neutral,” which poses a challenge during evaluation. To address this, a simple yet effective post-processing step is applied to interpret the model's responses. The output is sequentially scanned for the presence of the words “negative,” “neutral,” or “positive.” As soon as one of these terms is detected, it is mapped to the corresponding sentiment label. If none of the target words appear in the response, the sentiment is defaulted to “neutral.” This rule-based mapping ensures consistent and reliable evaluation of the model’s performance despite its generative nature.</p>
                         <h2 class="section-heading" id="Results">Results</h2>
@@ -261,23 +261,7 @@ risk assessment[4], algorithmic trading[5], and financial report summarization[6
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <ul class="list-inline text-center">
                             <li class="list-inline-item">
-                                <a href="#!">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fas fa-circle fa-stack-2x"></i>
-                                        <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#!">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fas fa-circle fa-stack-2x"></i>
-                                        <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#!">
+                                <a href="https://github.com/shyamsankar11102000?tab=repositories" target="_blank" rel="noopener noreferrer">
                                     <span class="fa-stack fa-lg">
                                         <i class="fas fa-circle fa-stack-2x"></i>
                                         <i class="fab fa-github fa-stack-1x fa-inverse"></i>
@@ -285,7 +269,9 @@ risk assessment[4], algorithmic trading[5], and financial report summarization[6
                                 </a>
                             </li>
                         </ul>
-                        <div class="small text-center text-muted fst-italic">Copyright &copy; Shyam Sankar</div>
+                        <div class="small text-center text-muted fst-italic">
+                            Copyright &copy; Shyam Sankar
+                        </div>
                     </div>
                 </div>
             </div>
