@@ -30,6 +30,8 @@
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="#related-work">Related Work</a></li>
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="#Methods">Methods</a></li>
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="#Results">Results</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="#Conclusion">Conclusion</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="#Discussion">Discussion</a></li>
                     </ul>
                 </div>
             </div>
@@ -185,7 +187,7 @@ risk assessment[4], algorithmic trading[5], and financial report summarization[6
                                         <td>0.699</td>
                                       </tr>
                                       <tr>
-                                        <td><strong>Our Model</strong></td>
+                                        <td><strong>ALPACCA-SENSE</strong></td>
                                         <td><strong>0.712</strong></td>
                                         <td><strong>0.603</strong></td>
                                         <td><strong>0.825</strong></td>
@@ -202,7 +204,12 @@ risk assessment[4], algorithmic trading[5], and financial report summarization[6
                             <p>
                             These results confirm that our model provides state-of-the-art performance for financial sentiment analysis, particularly excelling in scenarios where data is noisy or sentiment is more subtle, such as in social media content.
                             </p>
-
+                            <h2 class="section-heading" id="Conclusion">Conclusion</h2>
+                            <p>The ALPACCA-SENSE framework demonstrates the effectiveness of fine-tuning large language models for domain-specific sentiment analysis in finance. By leveraging the LLaMA 7B model with parameter-efficient techniques like LoRA, our approach achieves state-of-the-art performance on both formal (Financial PhraseBank) and informal (Twitter Financial News) datasets. The model's superior accuracy and robustness—particularly in handling noisy, real-world text—highlight the value of instruction tuning and efficient training strategies. These results underscore the growing potential of LLMs in supporting financial decision-making, sentiment tracking, and real-time market analysis. Future work may explore multi-modal inputs, real-time deployment, and integration with trading systems to further enhance the model's utility in financial environments.</p>
+                            <h2 class="section-heading" id="Discussion">Discussion</h2>
+                            <p>Incorporating Retrieval-Augmented Generation (RAG) into ALPACCA-SENSE offers a powerful avenue to enhance contextual understanding, especially when dealing with sparse or ambiguous financial texts. By retrieving relevant external documents—such as recent news articles, earnings reports, or SEC filings—RAG enables the model to ground its sentiment predictions in richer, real-time context. This is particularly valuable in finance, where up-to-date information often alters sentiment and nuance significantly. Integrating RAG can help mitigate hallucinations and improve factual consistency, especially in edge cases where model confidence is low.</p>
+                            <p>To further boost ALPACCA-SENSE’s robustness and trustworthiness, I plan to implement feedback loops and human-in-the-loop (HITL) mechanisms. These will allow users to provide real-time corrections or confirmations, helping the model learn from its mistakes and adjust to new sentiment trends. Incorporating this into the pipeline—especially in the form of active learning—ensures that the model doesn’t just perform well on benchmarks but continues to evolve based on real-world usage and expert oversight. Over time, this interactive refinement will improve both performance and user confidence.</p>
+                            <p>I’m excited to explore and integrate these enhancements into ALPACCA-SENSE. Stay tuned for updates as the model evolves into a more intelligent, context-aware, and user-guided financial sentiment analysis system.</p>
                             <h2 class="section-heading" id="references">References</h2>
 
                             <ol>
